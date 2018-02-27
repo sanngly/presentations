@@ -1,0 +1,34 @@
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'users/:id/:name', component: UserComponent },
+  { path: 'servers', component: ServersComponent },
+  { path: 'servers/:id/edit', component: EditServerComponent },
+  { path: 'charts:id', component: ChartsComponent }
+];
+
+const summaryRoutes: Routes = [
+  { path: 'summary', children:
+    [
+      { path: '', redirectTo: '/summary/head', pathMatch: 'full' },
+      { path: 'head', component: HeadComponent },
+    ]
+  }
+];
+
+const headRoutes: Routes = [
+  { path: 'head', children:
+    [
+      { path: '', redirectTo: '/summary/head/', pathMatch: 'full' },
+      { path: ':id/:name', component: AntComponent }
+    ]
+  }
+];
+
+{ path: 'head', component: HeadComponent, children:
+      [
+        { path: ':id/:name', component: AntComponent },
+      ]
+    },
+    { path: 'spend', component: SpendComponent },
+    { path: 'sow', component: SowComponent }

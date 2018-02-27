@@ -1,0 +1,1 @@
+npm instal --save-dev webpack@2.1.0-beta.21 webpack-merge angular2-template-loader awesome-type-script del-cli html-loader typescript angular2-router-loader raw-loader

@@ -1,0 +1,103 @@
+=======================================================================================================================================
+db.users.findOne();
+{
+        "_id" : ObjectId("59af9b585ca2ba0c80d0b0c2"),
+        "firstName" : "Sanjoy",
+        "lastName" : "Ganguly",
+        "password" : "$2a$10$/VADLnHDZBbRTuPsxZja2..VuCKac0egfNA83rFob5km6OqWKX6j.",
+        "email" : "reach.sanjoy.ganguly@gmail.com",
+        "messages" : [
+                ObjectId("59af9d1b5ca2ba0c80d0b0c9"),
+                ObjectId("59af9d415ca2ba0c80d0b0ca"),
+                ObjectId("59af9d575ca2ba0c80d0b0cb"),
+                ObjectId("59af9d975ca2ba0c80d0b0cc"),
+                ObjectId("59af9db75ca2ba0c80d0b0cd"),
+                ObjectId("59af9dcf5ca2ba0c80d0b0ce"),
+                ObjectId("59af9de25ca2ba0c80d0b0cf")
+        ],
+        "__v" : 7
+}
+db.messages.findOne();
+{
+        "_id" : ObjectId("59af9d1b5ca2ba0c80d0b0c9"),
+        "content" : "Reboot Activity for Patch Management",
+        "user" : ObjectId("59af9b585ca2ba0c80d0b0c2"),
+        "__v" : 0
+}
+
+
+SOW_ID
+SOW_DATE_TIME
+SOW_VALUE
+SOW_CATEGORY
+SOW_STATUS
+QUARTER
+FINANCIAL_YEAR
+MONTH
+VENDOR_ID
+VENDOR_NAME
+LOCATION_ID
+LOCATION_NAME
+
+
+heroku.sanjoy@gmail.com
+reach.sanjoy.ganguly@gmail.com
+esanjoyganguly@gmail.com
+
+mlab
+
+account - sanjoy.ganguly
+username - sanjoy.ganguly
+email - esanjoyganguly@gmail.com
+password - subject@123
+mongodb://<dbuser>:<dbpassword>@ds127854.mlab.com:27854/node-angular
+
+mongo ds127854.mlab.com:27854/node-angular -u <dbuser> -p <dbpassword>
+
+mongodb-user
+$anj0y@1413
+mongodb-password
+subject@123
+=======================================================================================================================================
+
+db.PV_MT_HEADCOUNT_REGULAR.aggregate([
+    { $match : { "EMPLOYEE_STATUS_CD" : "ACTIVE" } },
+    { $group : { _id: '$COUNTRY_DESCR', count: { $sum: 1 }}},
+    { $group : { _id: '$_id.label', total: { $sum: '$count'}}},
+    { $project : {
+      _id : 0,
+      key:"$_id",
+      total:1,
+      count:1
+    }
+    },{ $sort : { key : 1} }
+  ])
+  
+  db.getCollection('customers').aggregate([
+    { $match : { "status" : "Closed" } },
+    { $unwind: "$lines" },
+    { $match : { "lines.status" : "Closed" } },
+    { $match : { "lines.deliveryMethod" : "Tech Delivers" } },
+    { $group : {
+      _id:{activityNumber:"$activityNumber",techid:"$techid",label: "$lines.product",date: {$substr: [ "$date", 0, 10 ]}},
+      values: { $push:  
+          { date: {$substr: [ "$date", 0, 10 ]} }
+      },
+      count: { $sum: 1 }
+    }},
+    { $group : {
+      _id:"$_id.label",
+      values : {
+        $push : { date : "$_id.date", activityNumber:"$_id.activityNumber",techid:"$_id.techid",count : "$count"}
+      },total:{$sum:"$count"}
+    }
+    },
+    { $project : {
+      _id : 0,
+      key:"$_id",
+      values:1,
+      total:1,
+      count:1
+    }
+    },{ $sort : { key : 1} }
+  ])

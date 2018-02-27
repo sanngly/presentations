@@ -1,0 +1,196 @@
+﻿git init
+git status
+git add package.json
+git add partials/
+git add public/
+git add server.js
+git add views/
+git status
+git add .gitignore
+git status
+git commit -m "Initial Commit By sanngly"
+git remote add origin https://github.com/sanngly/node-web-server.git
+git push -u origin master
+heroku --help
+Y
+cd..
+cd notes-node
+git init
+git status
+git add app.js
+git status
+git add notes.js
+git add notes-data.json
+git add package.json
+git add playground/
+git add .gitignore
+git status
+git remote add origin https://github.com/sanngly/notes-node.git
+git push -u origin master
+git commit -m "Initial Commit By sanngly"
+git remote add origin https://github.com/sanngly/notes-node.git
+git push -u origin master
+history
+doskey /history
+
+
+D35967862
+03541610126392 
+
+1427470 - complaint no.
+neareast - dispute form 
+184784.00
+19997.00
+
+Bangalore, India  
+Mindtree Ltd. 
+Global Village, RVCE Post 
+Mysore Road, Bengaluru - 560059 
+Karnataka, India
+
+UNISYS GLOBAL SERVICES INDIA
+Unisys Global Services - India (STP Div. of Unisys India Pvt. Ltd.)
+135/1, Residency Road Bangalore Karnataka 560025 India
+Phone: +91 80 4159 4000 Fax: +91 80 4151 0040
+
+Global package:
+
+npm uninstall -g @angular/cli
+npm cache clean
+# if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
+npm install -g @angular/cli@latest
+Local project package:
+
+rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell
+npm install --save-dev @angular/cli@latest
+npm install
+
+NEFT Dr-CNRB0002778-BALAJIS LAKESIDE MARVEL RESIDENTS-NETBANK, MUM-N310170403903883
+
+vaishnavi.rk@hdfcbank.complaint
+
+git remote add origin https://github.com/sanngly/weather-app.git
+git push -u origin master
+
+git remote add origin https://github.com/sanngly/node-web-server.git
+git push -u origin master
+
+git remote add origin https://github.com/sanngly/notes-node.git
+git push -u origin master
+
+git remote add origin https://github.com/sanngly/node-tests.git
+git push -u origin master
+
+heroku
+
+Login Id - reach.sanjoy.ganguly@gmail.com 
+password - Qwerty@123
+
+npm install expect.js --save-dev
+npm install supertest --save-dev
+
+npm config set strict-ssl false
+
+npm config set registry "http://registry.npmjs.org/"
+https://www.npmjs.com/package/supertest
+
+npm --proxy http://10641895:Asdfgh@1234@http://blrproxy.bglrodc.lntinfotech.com:8002 install expect@1.20.2 --save-dev
+
+npm --proxy http://10641895:Poiuy@1234@http://blrproxy.bglrodc.lntinfotech.com:8002 install supertest@3.0.0 --save-dev
+
+npm --proxy-https https://10641895:Poiuy@1234@https://blrproxy.bglrodc.lntinfotech.com:8002 install supertest@3.0.0 --save-dev
+
+
+npm --proxy http://10641895:Poiuy@1234@http://blrproxy.bglrodc.lntinfotech.com:8002 install mongodb --save-dev
+
+npm config set https-proxy http://proxy.company.com:8080
+
+npm config set proxy http://10641895:Poiuy@1234@http://blrproxy.bglrodc.lntinfotech.com:8002
+npm config set https-proxy http://10641895:Poiuy@1234@http://blrproxy.bglrodc.lntinfotech.com:8002
+
+
+http://blrproxy.bglrodc.lntinfotech.com:8002/
+
+proxy=http://10641895:Poiuy%401234@http//blrproxy.bglrodc.lntinfotech.com:8002
+https-proxy=http://10641895:Poiuy%401234@http//blrproxy.bglrodc.lntinfotech.com:8002
+registry=http://registry.npmjs.org/
+
+mongod --dbpath D:\mongodb\data
+
+========================
+git clone https://github.com/sanngly/node-chat-app.git
+git remote add origin https://github.com/sanngly/node-chat-app.git
+git push -u origin master
+
+npm install express@4.16.2 body-parser@1.18.2 --save
+
+("5a37b73bc95de5216cd6667b")
+
+ObjectId("5a37b73bc95de5216cd6667c"),
+
+ObjectId("5a390a1cf9b6de23d0efd52e"),
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YTQxZjk0NWMzMDI0OTExNTgwNzBjYWYiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTE0MjczMTAxfQ.jADDGJKAC0NqfLZ3fW3ON36tsY5v5WTF_7uPdlNUbPA
+
+npm install moment --save--dev   # npm
+
+git remote add origin https://github.com/sanngly/async-wait-app.git
+git push -u origin master
+
+
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @sanngly
+ Sign out
+ Unwatch 1
+  Star 0  Fork 0 sanngly/async-wait-app
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Quick setup — if you’ve done this kind of thing before
+ Set up in Desktop	or	
+ HTTPS
+ SSH
+
+https://github.com/sanngly/async-wait-app.git
+
+We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+
+echo "# async-wait-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sanngly/async-wait-app.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/sanngly/async-wait-app.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+Import code
+ ProTip! Use the URL for this page when adding GitHub as a remote.
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+
+git remote add origin https://github.com/sanngly/typescript-complete-course.git
+
+
+
