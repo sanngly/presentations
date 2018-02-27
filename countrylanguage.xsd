@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="countrylanguage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CountryCode">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Language">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IsOfficial" default="F">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Percentage" default="0.0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="countrylanguage_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CountryCode"/>
+			<xs:field xpath="Language"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>

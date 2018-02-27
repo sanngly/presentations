@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://com/blog/samples/webservices/countryservice" xmlns:country="http://webservices.samples.blog.com" targetNamespace="http://com/blog/samples/webservices/countryservice" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="city">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="35"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CountryCode">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="District">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="20"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Population" default="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="city_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="ID"/>
+		</xs:key>
+	</xs:element>
+	<xs:element name="country">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Code">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="52"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Continent" default="Asia">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Region">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="26"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SurfaceArea" default="0.00">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IndepYear" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:short">
+							<xs:minInclusive value="-32768"/>
+							<xs:maxInclusive value="32767"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Population" default="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LifeExpectancy" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GNP" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GNPOld" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LocalName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="45"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GovernmentForm">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="45"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HeadOfState" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Capital" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Code2">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="city" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="countrylanguage" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="country_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="Code"/>
+		</xs:key>
+		<xs:keyref name="city_ForeignKey_1" refer="country_PrimaryKey_1">
+			<xs:selector xpath="city"/>
+			<xs:field xpath="CountryCode"/>
+		</xs:keyref>
+		<xs:keyref name="countrylanguage_ForeignKey_1" refer="country_PrimaryKey_1">
+			<xs:selector xpath="countrylanguage"/>
+			<xs:field xpath="CountryCode"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="countrylanguage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CountryCode">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Language">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IsOfficial" default="F">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Percentage" default="0.0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="countrylanguage_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CountryCode"/>
+			<xs:field xpath="Language"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>

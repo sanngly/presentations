@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by rohit kadoo (LTI) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="country">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Code">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="52"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Continent" default="Asia">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Region">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="26"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SurfaceArea" default="0.00">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IndepYear" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:short">
+							<xs:minInclusive value="-32768"/>
+							<xs:maxInclusive value="32767"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Population" default="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LifeExpectancy" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GNP" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GNPOld" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:float">
+							<xs:minInclusive value="-3.402823e+38"/>
+							<xs:maxInclusive value="3.402823e+38"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LocalName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="45"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="GovernmentForm">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="45"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HeadOfState" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Capital" nillable="true" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="-2147483648"/>
+							<xs:maxInclusive value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Code2">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="country_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="Code"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>
